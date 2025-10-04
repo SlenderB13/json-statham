@@ -1,0 +1,59 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    // Target modern JavaScript features
+    "target": "ESNext",
+    // Use ES modules for module system
+    "module": "ESNext",
+    // Specify module resolution strategy for bundlers like Vite
+    "moduleResolution": "Bundler",
+    // Enable all strict type-checking options
+    "strict": true,
+    // Preserve JSX syntax if you're using React or similar in JS files
+    // If not using JSX, you can remove this line.
+    "jsx": "preserve",
+    // Allow JavaScript files to be compiled
+    "allowJs": true,
+    // Enable type checking for JavaScript files (important for JSDoc)
+    "checkJs": true,
+    // Allow importing JSON modules
+    "resolveJsonModule": true,
+    // Enable compatibility for importing CommonJS modules as ES modules
+    "esModuleInterop": true,
+    // Ensure consistent casing in file names
+    "forceConsistentCasingInFileNames": true,
+    // Ensure each file can be safely transpiled without relying on other files
+    // This is recommended for Vite's build process.
+    "isolatedModules": true,
+    // Skip type checking of declaration files (e.g., node_modules types)
+    "skipLibCheck": true,
+    // Specify library files to be included in the compilation
+    "allowImportingTsExtensions": true,
+    "lib": [
+      "ESNext", // For modern JavaScript features
+      "DOM",    // For browser DOM APIs
+      "DOM.Iterable" // For iterable DOM types
+    ],
+    // Include Vite client types for environment variables, etc.
+    "types": [
+      "vite/client"
+    ],
+    // Define the base URL for module resolution
+    // "baseUrl": "./",
+    // Define path aliases if you have them (e.g., for src directory)
+    // "paths": {
+    //   "@/*": ["./src/*"]
+    // }
+  },
+  // Files to include in the compilation
+  "include": [
+    "src/**/*.js",   // Your JavaScript source files
+    "src/**/*.ts",   // Your TypeScript source files
+    "src/**/*.d.ts"  // Your TypeScript declaration files
+  ],
+  // Files to exclude from the compilation
+  "exclude": [
+    "node_modules", // Standard exclusion for node modules
+    "dist"          // Output directory
+  ]
+}
